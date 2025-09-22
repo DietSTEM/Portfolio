@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project [PROJECT NAME] | Ir. Diet Nijs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    /* --- General styles copied from your template --- */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 111, 97, 0.9);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s;
+      z-index: 2000;
+      backdrop-filter: blur(6px);
+    }
+    .back:hover { background: rgba(255, 59, 47, 0.95); transform: translateY(-2px); }
+
+    .sidebar {
+      width: 300px;
+      background: #fff;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.05);
+      padding: 80px 20px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .sidebar h3 { font-size: 1.1rem; margin-bottom: 10px; color: #FF6F61; }
+    .sidebar p { font-size: 0.95rem; margin: 4px 0; color: #333; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-pill {
+      background: #f3f3f3;
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      cursor: default;
+    }
+    .skill-pill:hover {
+      background: #FF6F61;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 111, 97, 0.35);
+    }
+
+    .content {
+      flex: 1;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .content h1 { font-family: 'Georgia', serif; font-size: 2.2rem; margin-bottom: 10px; }
+    .content .meta { font-size: 0.95rem; color: #666; }
+
+    .explanation {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+    .explanation p { flex: 2; font-size: 1.05rem; line-height: 1.6; }
+    .explanation img { flex: 1; max-width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .explanation img:hover { transform: scale(1.05); }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img, .gallery video { width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .gallery img:hover, .gallery video:hover { transform: scale(1.02); }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
+        padding: 80px 10px 20px 10px;
+      }
+      .content { padding: 20px; }
+      .explanation { flex-direction: column; }
+      .back { top: 10px; left: 10px; padding: 8px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Projects -->
+  <a href="index.html#projects" class="back">← Back to Projects</a>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <h3>Course</h3>
+      <p>Bachelor Thesis</p>
+    </div>
+    <div>
+      <h3>Date</h3>
+      <p>2022-2023</p>
+    </div>
+    <div>
+      <h3>Duration</h3>
+      <p>1 year</p>
+    </div>
+    <div>
+      <h3>Grade</h3>
+      <p>17/20</p>
+    </div>
+    <div>
+      <h3>Learned Skills</h3>
+      <div class="skills-list">
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">OpenCV</span>
+        <span class="skill-pill">Vision</span>
+        <span class="skill-pill">Teamwork</span>
+	<span class="skill-pill">Raspberry Pi</span>
+	<span class="skill-pill">Optimization</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div>
+      <h1>Bachelor Thesis - Autonomous Drone</h1>
+      <p class="meta">Self-navigating drone with contactless charging</p>
+    </div>
+
+    <!-- Explanation -->
+    <div class="explanation">
+      <p>[Detailed explanation of the project, methodology, results, and impact]</p>
+      <img src="[Preview Image]" alt="[Alt text]">
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="[Image 1]" alt="[Alt text 1]">
+      <img src="[Image 2]" alt="[Alt text 2]">
+      <video controls src="drone.mov"></video>
+    </div>
+  </main>
+
+</body>
+</html>
